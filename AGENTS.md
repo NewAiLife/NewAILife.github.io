@@ -49,7 +49,11 @@ Each milestone should be one or more git commit. Any commands, file editing, and
 
 ## Starting jekyll container.
 ```
-# For Git Bash / Linux / macOS:
+# Git Bash (Windows / MinTTY): prefix with winpty
 export site_name=NewAILife
-docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll sh
+winpty docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll sh
+
+# Linux / macOS:
+# export site_name=NewAILife
+# docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll sh
 ```

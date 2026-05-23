@@ -11,11 +11,15 @@ This site is built with **Jekyll** using the **Chirpy** theme, running inside a 
 ### 1.1 Start Jekyll (live-reload)
 
 ```bash
-docker run --rm \
+# Windows Git Bash (MinTTY): prefix with winpty
+winpty docker run --rm \
   --volume=".:/srv/jekyll" \
   -p 4000:4000 \
   -it jekyll/jekyll \
   jekyll serve --livereload
+
+# Linux / macOS:
+# docker run --rm --volume=".:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll jekyll serve --livereload
 ```
 
 Then open **http://localhost:4000**.
@@ -29,7 +33,11 @@ docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll jekyll build
 ### 1.3 Shell inside container
 
 ```bash
-docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll sh
+# Windows Git Bash (MinTTY): prefix with winpty
+winpty docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll sh
+
+# Linux / macOS:
+# docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll sh
 ```
 
 ---
