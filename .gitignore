@@ -22,7 +22,6 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
-_sass/vendors
 
 # Hidden system files
 *~
