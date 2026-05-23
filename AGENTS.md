@@ -47,13 +47,31 @@ Each milestone should be one or more git commit. Any commands, file editing, and
 |3|Update Agents.md and skill.md| DONE |
 |4|Update document for how to configure GitHub Actions to auto deploy after push change| TODO |
 
-## Starting jekyll container.
+## Starting Jekyll container
+
+### Interactive (serve with live-reload)
+
+```bash
+# Windows Git Bash:
+winpty docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll sh
+
+# Inside the container:
+#   bundle install
+#   bundle exec jekyll serve --livereload
 ```
-# Git Bash (Windows / MinTTY): prefix with winpty, use $PWD for absolute path
-export site_name=NewAILife
-winpty docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll sh
+
+> **Windows Git Bash notes:**
+> - Interactive commands (`-it`) need the `winpty` prefix
+> - Non-interactive commands need `MSYS_NO_PATHCONV=1` before `docker run`
+> - Always use `$PWD` (not `.`) for volume mounts to avoid path mangling
+
+### One-off build
+
+```bash
+# Windows Git Bash:
+MSYS_NO_PATHCONV=1 docker run --rm --volume="$PWD:/srv/jekyll" -e HOME=/tmp \
+  jekyll/jekyll sh -c "bundle install --quiet && bundle exec jekyll build"
 
 # Linux / macOS:
-# export site_name=NewAILife
-# docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll sh
+# docker run --rm --volume="$PWD:/srv/jekyll" jekyll/jekyll sh -c "bundle install --quiet && bundle exec jekyll build"
 ```
