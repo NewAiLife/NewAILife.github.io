@@ -11,15 +11,15 @@ This site is built with **Jekyll** using the **Chirpy** theme, running inside a 
 ### 1.1 Start Jekyll (live-reload)
 
 ```bash
-# Windows Git Bash (MinTTY): prefix with winpty
+# Windows Git Bash (MinTTY): use $PWD for absolute path + winpty for TTY
 winpty docker run --rm \
-  --volume=".:/srv/jekyll" \
+  --volume="$PWD:/srv/jekyll" \
   -p 4000:4000 \
   -it jekyll/jekyll \
   jekyll serve --livereload
 
 # Linux / macOS:
-# docker run --rm --volume=".:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll jekyll serve --livereload
+# docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll jekyll serve --livereload
 ```
 
 Then open **http://localhost:4000**.
@@ -27,17 +27,21 @@ Then open **http://localhost:4000**.
 ### 1.2 One-off build
 
 ```bash
-docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll jekyll build
+# Windows Git Bash (MinTTY): prefix with winpty
+winpty docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll jekyll build
+
+# Linux / macOS:
+# docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll jekyll build
 ```
 
 ### 1.3 Shell inside container
 
 ```bash
 # Windows Git Bash (MinTTY): prefix with winpty
-winpty docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll sh
+winpty docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll sh
 
 # Linux / macOS:
-# docker run --rm --volume=".:/srv/jekyll" -it jekyll/jekyll sh
+# docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll sh
 ```
 
 ---
