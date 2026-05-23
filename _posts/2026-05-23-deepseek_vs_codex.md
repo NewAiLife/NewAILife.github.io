@@ -6,7 +6,7 @@ tags: [Android, GPU, DeepSeek, DeepSeek V4, DeepCode, OpenAI, Codex, Codex CLI]
 pin: true
 ---
 
-## Introduction
+# Introduction
 
 As an engineer with experience in graphics application development, Android cloud gaming, GPU virtualization, and AI accelerator software stacks, I recently started a side project: building an Android GPU benchmark application.
 
