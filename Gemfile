@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 gemspec
 
+gem "webrick" # Required for Jekyll serve with Ruby 3.x
 gem "html-proofer", "~> 5.0", group: :test
 
 platforms :windows, :jruby do
