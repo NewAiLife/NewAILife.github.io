@@ -48,7 +48,7 @@ jobs:
           node-version: lts/*
 
       - name: Build JS assets
-        run: npm install && npm run build
+        run: npm install && npm run build:js
 
       - name: Build site
         run: |
