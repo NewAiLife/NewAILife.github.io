@@ -5,6 +5,7 @@ source "https://rubygems.org"
 gemspec
 
 gem "webrick" # Required for Jekyll serve with Ruby 3.x
+gem "jekyll-sass-converter", "~> 2.0" # Avoid sass-embedded broken pipe on musl
 gem "html-proofer", "~> 5.0", group: :test
 
 platforms :windows, :jruby do
