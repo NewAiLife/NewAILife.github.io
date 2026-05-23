@@ -5,9 +5,7 @@ source "https://rubygems.org"
 gemspec
 
 gem "webrick" # Required for Jekyll serve with Ruby 3.x
-# Pin jekyll-sass-converter for Alpine/musl (Docker) to avoid sass-embedded segfault.
-# On Ubuntu (GitHub Actions), the default 3.x with sass-embedded works fine.
-gem "jekyll-sass-converter", "~> 2.0", platform: [:x86_64-linux-musl]
+gem "jekyll-sass-converter", "~> 2.0"
 gem "html-proofer", "~> 5.0", group: :test
 
 platforms :windows, :jruby do
