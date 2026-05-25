@@ -5,6 +5,7 @@ This is a website for sharing how to use AI in life. The topics this site may co
 - AI for Productivity
 - AI for Health & Wellness
 - AI for Photography
+- AI for Nature
 - AI for Learning
 - AI for Families
 - AI for Coding

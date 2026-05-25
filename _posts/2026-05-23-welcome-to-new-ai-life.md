@@ -19,6 +19,7 @@ From using AI to boost your productivity, to discovering AI-powered tools for he
 | **AI for Productivity** | Tools and workflows to get more done with AI |
 | **AI for Health & Wellness** | AI-powered fitness, nutrition, and mental health |
 | **AI for Photography** | Editing, enhancement, and creative AI tools |
+| **AI for Nature** | Birding, wildlife identification, and outdoor AI |
 | **AI for Learning** | Smarter ways to learn with AI tutors and tools |
 | **AI for Families** | AI that helps with parenting, education, and home life |
 | **AI for Coding** | AI-assisted development tips and tools |
